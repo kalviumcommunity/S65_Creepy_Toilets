@@ -33,7 +33,7 @@ Admins can moderate content, remove inappropriate posts, and manage users.
 **Database:** MongoDB for storing user, post, and reaction data.
 **Authentication:** JSON Web Tokens (JWT) for secure access.
 
-**Hosting:**
+## Hosting:
 
 **Frontend:** Vercel.
 **Backend:** Render.
