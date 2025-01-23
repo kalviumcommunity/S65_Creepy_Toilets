@@ -6,7 +6,11 @@ app.get('/ping', (req, res) =>{
     try {
         res.status(200).send("Ping Working Fine")
     } catch (error) {
-        res.status(400).send("Ping Not Working Fine")
+        res.status(500).json({
+            error: "Internal Server Error",
+            message: "Ping route is not Working Fine",
+            description: error.message
+        })
     }
 })
 
