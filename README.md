@@ -56,4 +56,4 @@ Implementing user interaction tools like comments, reactions, and leaderboards.
 **Creative Concept:**
 A unique, humorous idea that’s engaging and potentially viral, making the project both fun and rewarding.
 
-(**Backend Deployed Link**)[https://s65-creepy-toilets.onrender.com/ping]
+[**Backend Deployed Link**](https://s65-creepy-toilets.onrender.com/ping)
