@@ -1,6 +1,7 @@
 const express = require('express')
-
+require('dotenv').config()
 const app = express()
+const connetDB = require('./config/db')
 
 app.get('/ping', (req, res) =>{
     try {
@@ -16,6 +17,7 @@ app.get('/ping', (req, res) =>{
 
 app.listen(3000, (req, res) =>{
     try {
+        connetDB()
         console.log("Server is Listening at Port 3000")
     } catch (error) {
         console.log(error.message)
