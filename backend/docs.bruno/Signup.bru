@@ -1,0 +1,19 @@
+meta {
+  name: Signup
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/api/users/signup
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username": "admin2",
+    "email": "admin2@admin.com",
+    "password": "admin"
+  }
+}

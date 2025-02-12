@@ -1,0 +1,26 @@
+meta {
+  name: Create_Toilet
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:3000/api/toilets
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YWM4YmQxMjAwMzg1ZjZjNzkzOTNmNSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzM5MzYxMjM5LCJleHAiOjE3Mzk5NjYwMzl9.ctyoh1BVl9wQjv9CxWRxCRdY6lEAb5M-G_mp5DjcgIo
+}
+
+body:json {
+  {
+    "title": "Test Toilet",
+    "address": "Test",
+    "description": "Test desc",
+    "images": [
+      "https://i.pinimg.com/564x/5f/d3/f9/5fd3f9c3c46db039b2709e39593f8edb.jpg"
+    ]
+  }
+}
