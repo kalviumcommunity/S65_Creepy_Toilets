@@ -1,4 +1,3 @@
-/* Landing.css */
 .landing-container {
     height: 100vh;
     display: flex;
@@ -6,22 +5,25 @@
     justify-content: center;
     text-align: center;
     color: white;
-    font-family: 'Arial', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
     background: url("https://media.istockphoto.com/id/108219342/photo/disturbing-toilet.jpg?s=612x612&w=0&k=20&c=ojvU7q57i8zvEl1qV_uoD25CucelSN4zs46GI8Fy0Pw=") no-repeat center center/cover;
-
 }
 
 body {
     background-color: rgba(0, 0, 0, 0.903);
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.landing-content h1 {
+    font-size: 8rem;
+    font-weight: 800;
 }
-
-p {
-    font-size: 1.2rem;
+.arrow{
+    display: none;
+}
+.landing-content p {
+    font-size: 1rem;
     margin-bottom: 1.5rem;
 }
 .landing-content{
@@ -32,6 +34,7 @@ p {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    animation: move 1s ease-in;  
 }
 .landing-buttons {
     display: flex;
@@ -40,7 +43,7 @@ p {
 }
 
 .btn {
-    padding: 10px 20px;
+    padding: 15px 25px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -48,11 +51,21 @@ p {
     text-decoration: none;
     transition: 0.3s;
 }
-
+.explore-btn:hover{
+    display: flex;
+    gap: 10px;
+    .arrow{
+        display: block;
+        animation: fade 0.5s ease-in ;
+        transition: 1s ease-in;
+    }
+}
 .explore-btn {
     background: #ff5733;
     color: white;
     font-weight: 600;
+    border-radius: 30px;
+
 }
 
 .submit-btn {
@@ -60,6 +73,22 @@ p {
     color: black;
 }
 
-.btn:hover {
-    transform: scale(1.1);
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes move {
+    0%{
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
 }
