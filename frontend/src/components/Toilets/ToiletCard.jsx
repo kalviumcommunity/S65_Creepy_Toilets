@@ -2,25 +2,25 @@ import React from 'react'
 
 const reactions = ['😂', '🔥', '❤️', '😂', '🔥', '❤️','😂', '🔥', '❤️']
 
-const ToiletCard = () => {
+const ToiletCard = ({toilet}) => {
   return (
     <div className="card">
     <img 
-      src="https://i.pinimg.com/564x/5f/d3/f9/5fd3f9c3c46db039b2709e39593f8edb.jpg" 
+      src={toilet.images[0]} 
       alt="Creepy Toilet" 
       className="card-image"
     />
     
-    <h5 className="title">Creepy Gas Station Toilet</h5>
+    <h5 className="title">{toilet.title}</h5>
     
     <div className="address">
-      <p>Address of this Photo</p>
+      <p>{toilet.address}</p>
       <p className="dot">·</p>
-      <p className="user">Admin</p>
+      {/* <p className="user">{toilet.submittedBy.username}</p> */}
     </div>
     
-    <p className="desc">Lights flicker, weird noises from the vent.</p>
-
+    <p className="desc">{toilet.description}</p>
+    <p className='address'>{toilet.createdAt.split("T")[0]}</p>
     {/* Additional Tags */}
     <div className="tags">
       <span className="tag">Spiders</span>
@@ -31,14 +31,14 @@ const ToiletCard = () => {
     {/* Slider for Creepiness Score */}
     <div className="slider-container">
       <label htmlFor="creepinessSlider" className="slider-label">
-        Creepiness Score: 0
+        Creepiness Score: {toilet.creepinessScore}
       </label>
     </div>
     
     {/* Reaction Emojis */}
     <div className="reactions">
       {/* Additional reactions from the array */}
-      {reactions.slice(4).map((item, index) => (
+      {toilet?.reactions.slice(4).map((item, index) => (
         <div key={index} className='emoji-container'>
 
           <div  className="emojis">{item}</div>
