@@ -5,9 +5,10 @@ const router = express.Router();
 
 router.post("/", async (req, res) => {
     try {
-        const submittedBy = req.user.id
+        // const submittedBy = req.user.id
         const { title, address, description, images } = req.body;
-        const newToilet = new Toilet({ title, address, description, submittedBy, images });
+        const newToilet = new Toilet({ title, address, description, images });
+        // const newToilet = new Toilet({ title, address, description, submittedBy, images });
         await newToilet.save();
         res.status(201).json({ message: "Toilet submitted successfully", toilet: newToilet });
     } catch (error) {
